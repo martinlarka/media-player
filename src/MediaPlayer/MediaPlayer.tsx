@@ -1,16 +1,15 @@
 import { useRef, useState } from "react";
-import "array.prototype.at";
 
-import { usePlayerState } from "./Context/PlayerContext";
+import { usePlayerState } from "../Context/PlayerContext";
 import { ControlButton } from "./ControlButton";
-import { usePlaylistState } from "./Context/PlaylistContext";
+import { usePlaylistState } from "../Context/PlaylistContext";
 
-import previous from "./assets/previous.svg";
-import backward from "./assets/backward.svg";
-import play from "./assets/play.svg";
-import pause from "./assets/pause.svg";
-import forward from "./assets/forward.svg";
-import next from "./assets/next.svg";
+import previous from "../assets/previous.svg";
+import backward from "../assets/backward.svg";
+import play from "../assets/play.svg";
+import pause from "../assets/pause.svg";
+import forward from "../assets/forward.svg";
+import next from "../assets/next.svg";
 
 export const MediaPlayer = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
