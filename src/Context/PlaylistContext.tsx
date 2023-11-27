@@ -1,8 +1,12 @@
-import { PropsWithChildren, createContext, useState } from "react";
+import { PropsWithChildren, createContext, useContext, useState } from "react";
 
 const PlaylistContext = createContext<
   [string[], React.Dispatch<React.SetStateAction<string[]>>]
 >([[], () => null]);
+
+export const usePlaylistState = () => {
+  return useContext(PlaylistContext);
+};
 
 export default function PlaylistContextProvider({
   children,
